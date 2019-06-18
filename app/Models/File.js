@@ -5,6 +5,7 @@ const Model = use('Model')
 const Env = use('Env')
 
 class File extends Model {
+  // Campo virtual do model
   static get computed () {
     return ['url']
   }
