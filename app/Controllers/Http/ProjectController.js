@@ -21,6 +21,7 @@ class ProjectController {
    * @param {View} ctx.view
    */
   async index ({ request }) {
+    // request.get() pega os queryparams do endereço
     const { page } = request.get()
     const projects = await Project.query()
       .with('user')
