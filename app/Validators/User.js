@@ -11,7 +11,8 @@ class User {
     return {
       username: 'required|unique:users',
       email: 'required|email|unique:users',
-      password: 'required|confirmed'
+      password: 'required|confirmed',
+      'addresses.*.street': 'required_if:addresses'
     }
   }
 
